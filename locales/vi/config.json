@@ -70,12 +70,14 @@
   "theme=dark_protanopia": "GitHub Dark Protanopia & Deuteranopia",
   "theme=dark_tritanopia": "GitHub Dark Tritanopia",
   "theme=dark_dimmed": "GitHub Dark Dimmed",
-  "theme=transparent_dark": "Transparent Dark",
   "theme=preferred_color_scheme": "Phối màu ưa thích",
+  "theme=transparent_dark": "Transparent Dark",
+  "theme=cobalt": "RStudio Cobalt",
   "theme=custom": "Tùy chỉnh (thử nghiệm)",
 
   "enableGiscus": "Bật giscus",
   "addTheFollowingScriptTag": "Thêm thẻ <code><script></code> sau vào website của bạn nơi bạn muốn comment xuất hiện. Nếu một phần tử có class <code>giscus</code> tồn tại, các comment sẽ được đặt ở đó.",
+  "youHaveNotConfiguredRepositoryCategory": "Bạn chưa định cấu hình <arepo>Repository</arepo> và/hoặc <acategory>thể loại</acategory> của mình. Các giá trị cho các trường đó sẽ không được hiển thị cho đến khi bạn điền vào.",
   "copy": "Copy",
 
   "[enterRepoHere]": "[NHẬP REPO TẠI ĐÂY]",

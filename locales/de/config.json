@@ -69,12 +69,14 @@
   "theme=dark_protanopia": "GitHub Dunkel (Protanopia & Deuteranopia)",
   "theme=dark_tritanopia": "GitHub Dunkel (Tritanopia)",
   "theme=dark_dimmed": "GitHub Dunkel (Gedimmt)",
-  "theme=transparent_dark": "Durchsichtig Dunkel",
   "theme=preferred_color_scheme": "Bevorzugtes Farbprofil",
+  "theme=transparent_dark": "Durchsichtig Dunkel",
+  "theme=cobalt": "RStudio Cobalt",
   "theme=custom": "Benutzerdefiniert (Experimentel)",
 
   "enableGiscus": "giscus aktivieren",
   "addTheFollowingScriptTag": "Füge den folgenden <code><script></code> tag zu der Vorlage deiner Webseite hinzu, in welcher du die Kommentare anzeigen möchtest. Wenn ein Element mit dem Namen <code><giscus></code> existiert werden die Kommentare an dieser Stelle platziert.",
+  "youHaveNotConfiguredRepositoryCategory": "Sie haben Ihr <arepo>Repository</arepo> und/oder Ihre <acategory>Kategorie</acategory> nicht konfiguriert. Die Werte für diese Felder werden erst angezeigt, wenn Sie sie ausgefüllt haben.",
   "copy": "Kopieren",
 
   "[enterRepoHere]": "[GIB REPO NAMEN HIER EIN]",

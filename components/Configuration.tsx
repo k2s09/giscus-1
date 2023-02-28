@@ -11,6 +11,7 @@ import {
 } from '../lib/i18n';
 import { ICategory } from '../lib/types/adapter';
 import { InputPosition } from '../lib/types/giscus';
+import { normalizeRepoName } from '../lib/utils';
 import { availableThemes, env, Theme } from '../lib/variables';
 import { getCategories } from '../services/giscus/categories';
 
@@ -114,7 +115,7 @@ export default function Configuration({ directConfig, onDirectConfigChange }: IC
   });
   const [error, setError] = useState(false);
   const [categories, setCategories] = useState<ICategory[]>([]);
-  const dRepository = useDebounce(config.repository);
+  const dRepository = normalizeRepoName(useDebounce(config.repository));
   const { t, dir } = useGiscusTranslation('config');
 
   useEffect(() => {
@@ -548,6 +549,14 @@ export default function Configuration({ directConfig, onDirectConfigChange }: IC
       <p>
         <Trans i18nKey="config:addTheFollowingScriptTag" />
       </p>
+      {!config.repositoryId || (!config.category && config.mapping !== 'number') ? (
+        <div className="flash flash-warn mb-4">
+          <Trans
+            i18nKey="config:youHaveNotConfiguredRepositoryCategory"
+            components={{ arepo: <a href="#repository" />, acategory: <a href="#category" /> }}
+          />
+        </div>
+      ) : null}
       <div dir="ltr" className="highlight highlight-text-html-basic relative">
         <pre>
           <span className="pl-kos">{'<'}</span>
@@ -555,7 +564,7 @@ export default function Configuration({ directConfig, onDirectConfigChange }: IC
           <span className="pl-s">{env.app_host}/client.js</span>
           {'"\n        '}
           <span className="pl-c1">data-repo</span>={'"'}
-          <span className="pl-s">{config.repository || t('[enterRepoHere]')}</span>
+          <span className="pl-s">{dRepository || t('[enterRepoHere]')}</span>
           {'"\n        '}
           <span className="pl-c1">data-repo-id</span>={'"'}
           <span className="pl-s">{config.repositoryId || t('[enterRepoIDHere]')}</span>

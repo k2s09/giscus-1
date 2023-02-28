@@ -7,7 +7,99 @@ writing, this is a rolling-release project without any meaningful versioning
 whatsoever. Tags/releases may be created for the sole purpose of documenting
 major updates to the project.
 
-## 2021-08-13
+## 2023-02-26
+
+### Added
+
+- Add sign out button
+  ([#919](https://github.com/giscus/giscus/pull/919)).
+
+### Changed
+
+- Use `<link>` element to load default CSS
+  ([#920](https://github.com/giscus/giscus/pull/920)).
+
+## 2023-02-25
+
+### Changed
+
+- Use lazy loading for avatar images
+  ([#918](https://github.com/giscus/giscus/pull/918)).
+
+## 2023-02-11
+
+### Added
+
+- Add Persian localization
+  ([#867](https://github.com/giscus/giscus/pull/867)).
+
+## 2022-12-14
+
+### Fixed
+
+- Clear session if state has expired
+  ([#823](https://github.com/giscus/giscus/pull/823)).
+
+## 2022-12-10
+
+### Changed
+
+- Fix locale loader to avoid bundling all locales
+  ([#818](https://github.com/giscus/giscus/pull/818)).
+
+## 2022-12-04
+
+### Changed
+
+- Improve onboarding config UX
+  ([#807](https://github.com/giscus/giscus/pull/807)).
+
+## 2022-12-03
+
+### Changed
+
+- Disable automatic revalidation of the first page
+  ([#805](https://github.com/giscus/giscus/pull/805)).
+
+## 2022-11-12
+
+### Fixed
+
+- Fix iframe transparency
+  ([#785](https://github.com/giscus/giscus/pull/785),
+  [#787](https://github.com/giscus/giscus/pull/787)).
+
+## 2022-11-06
+
+### Fixed
+
+- Fix iframe transparency
+  ([#775](https://github.com/giscus/giscus/pull/775),
+  [#776](https://github.com/giscus/giscus/pull/776)).
+
+- Fix copy button permission
+  ([#774](https://github.com/giscus/giscus/pull/774)).
+
+### Added
+
+- Add locale fallback for `zh-Hant`
+  ([#773](https://github.com/giscus/giscus/pull/773)).
+
+- Add locale fallbacks for `zh-Hans` and `gsw`
+  ([#772](https://github.com/giscus/giscus/pull/772)).
+
+- Add Thai localization
+  ([#771](https://github.com/giscus/giscus/pull/771)).
+
+
+## 2022-10-26
+
+### Fixed
+
+- Fix `LAUGH` reaction emoji
+  ([#746](https://github.com/giscus/giscus/pull/746)).
+
+## 2022-08-13
 
 ### Changed
 

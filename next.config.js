@@ -2,7 +2,19 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 const withPreact = require('next-plugin-preact');
-const nextTranslate = require('next-translate');
+const nextTranslate = require('next-translate-plugin');
+
+const workaround = require('next-translate-plugin/lib/cjs/utils.js');
+
+const fallbacks = require('./i18n.fallbacks.json');
+
+// https://github.com/aralroca/next-translate/issues/851#issuecomment-1173611946
+workaround.defaultLoader = `
+  (l, n) => {
+    const lang = ${JSON.stringify(fallbacks)}[l] ?? l;
+    return import(\`@next-translate-root/locales/\${lang}/\${n}\`).then(m => m.default);
+  }
+`;
 
 const securityHeaders = [
   {
@@ -33,7 +45,7 @@ const securityHeaders = [
 
 const swr = 60 * 60 * 24 * 7; // 7 days
 
-module.exports = withBundleAnalyzer(
+const config = withBundleAnalyzer(
   withPreact(
     nextTranslate({
       async headers() {
@@ -70,3 +82,5 @@ module.exports = withBundleAnalyzer(
     }),
   ),
 );
+
+module.exports = config;

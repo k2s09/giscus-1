@@ -77,12 +77,14 @@
   "theme=dark_protanopia": "GitHub Dark Protanopia & Deuteranopia",
   "theme=dark_tritanopia": "GitHub Dark Tritanopia",
   "theme=dark_dimmed": "GitHub Dark Dimmed",
-  "theme=transparent_dark": "Transparent Dark",
   "theme=preferred_color_scheme": "用户偏好的色彩方案",
+  "theme=transparent_dark": "Transparent Dark",
+  "theme=cobalt": "RStudio Cobalt",
   "theme=custom": "自定义（实验性）",
 
   "enableGiscus": "启用 giscus",
   "addTheFollowingScriptTag": "在你想让评论出现的位置添加以下 <code><script></code> 标签。但如果已经存在带有 <code>giscus</code> 类的元素，则评论会被放在那里。",
+  "youHaveNotConfiguredRepositoryCategory": "您尚未配置<arepo>仓库</arepo>和/或<acategory>分类</acategory>。 在您填写这些字段之前，不会显示这些字段的值。",
   "copy": "复制",
 
   "[enterRepoHere]": "[在此输入仓库]",

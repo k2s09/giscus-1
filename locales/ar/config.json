@@ -70,12 +70,14 @@
   "theme=dark_protanopia": "أسود جيت هب عَمَى الأحمر والأخضر",
   "theme=dark_tritanopia": "أسود جيت هب عَمَى الأَزْرَق",
   "theme=dark_dimmed": "أسود جيت هب الغامق",
-  "theme=transparent_dark": "اﻷسود الشفاف",
   "theme=preferred_color_scheme": "نظام اﻷلوان المفضل",
+  "theme=transparent_dark": "اﻷسود الشفاف",
+  "theme=cobalt": "RStudio Cobalt",
   "theme=custom": "مخصص (تجريبي)",
 
   "enableGiscus": "تفعيل غيسكوس",
   "addTheFollowingScriptTag": "أضف <code><script></code> الوسم التالي إلى قالب موقعك في المكان الذي تريد أن تظهر فيه التعليقات. إذا كان هناك عنصر ذو صنف <code>giscus</code> ستظهر التعليقات بداخله.",
+  "youHaveNotConfiguredRepositoryCategory": "لم تقم بتكوين <arepo>المستودع</arepo> و / أو <acategory>الفئة</acategory> الخاصة بك. لن يتم عرض قيم هذه الحقول حتى تقوم بملئها.",
   "copy": "نسخ",
 
   "[enterRepoHere]": "[ضع رابط المستودع هنا]",

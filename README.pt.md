@@ -80,9 +80,9 @@ Esse README também está disponível em:
 
 - [Arabic (العربية)](README.ar.md)
 - [Deutsch](README.de.md)
-- [Deutsch (Schweiz)](README.gsw.md)
 - [English](README.md)
 - [Español](README.es.md)
+- [Persian (فارسی)](README.fa.md)
 - [Français](README.fr.md)
 - [Indonesia](README.id.md)
 - [Italiano](README.it.md)
@@ -93,6 +93,7 @@ Esse README também está disponível em:
 - [Português](README.pt.md)
 - [Română](README.ro.md)
 - [Русский](README.ru.md)
+- [ภาษาไทย](README.th.md)
 - [Türkçe](README.tr.md)
 - [Tiếng Việt](README.vi.md)
 - [简体中文](README.zh-CN.md)

@@ -72,6 +72,8 @@ main {
   --color-accent-subtle: rgb(64 158 255 / 15%);
   --color-success-fg: #26cd4d;
   --color-attention-fg: #f0b72f;
+  --color-attention-muted: #e09b13;
+  --color-attention-subtle: rgb(224 155 19 / 15%);
   --color-danger-fg: #ff6a69;
   --color-danger-muted: #ff6a69;
   --color-danger-subtle: rgb(255 106 105 / 15%);
@@ -83,8 +85,6 @@ main {
   /*! Extensions from @primer/css/alerts/flash.scss */
   --color-social-reaction-bg-hover: var(--color-scale-gray-7);
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
-
-  color-scheme: dark;
 }
 
 main .pagination-loader-container {

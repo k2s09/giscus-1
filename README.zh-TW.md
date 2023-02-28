@@ -1,6 +1,6 @@
 # [giscus][giscus]
 
-由 [GitHub Discussions][discussions] 驅動的留言系统。讓訪客借助 GitHub 在你的網站上留言和留下反應吧！本專案很大一部份是受 [utterances][utterances] 啟發。
+由 [GitHub Discussions][discussions] 驅動的留言系統。讓訪客借助 GitHub 在你的網站上留言和留下反應吧！本專案很大一部份是受 [utterances][utterances] 啟發。
 
 - [開放原始碼][repo]。🌏
 - 無追蹤，無廣告，永久免費。📡 🚫
@@ -44,7 +44,7 @@ giscus 載入時，會使用 [GitHub Discussions 搜尋 API][search-api] 根據�
 
 ## 轉移
 
-如果你曾經使用過其它利用 GitHub Issue 的留言系统（如 [utterances][utterances]、[gitalk][gitalk]），你可以[把已有的 issue 轉換成 discussion][convert]。轉換後，只要確保 discussion 標題與頁面的對應關係正確，giscus 就會自動使用這些 discussion。
+如果你曾經使用過其它利用 GitHub Issue 的留言系統（如 [utterances][utterances]、[gitalk][gitalk]），你可以[把已有的 issue 轉換成 discussion][convert]。轉換後，只要確保 discussion 標題與頁面的對應關係正確，giscus 就會自動使用這些 discussion。
 
 ## 正使用 giscus 的網站
 
@@ -80,9 +80,9 @@ giscus 載入時，會使用 [GitHub Discussions 搜尋 API][search-api] 根據�
 
 - [Arabic (العربية)](README.ar.md)
 - [Deutsch](README.de.md)
-- [Deutsch (Schweiz)](README.gsw.md)
 - [English](README.md)
 - [Español](README.es.md)
+- [Persian (فارسی)](README.fa.md)
 - [Français](README.fr.md)
 - [Indonesia](README.id.md)
 - [Italiano](README.it.md)
@@ -93,6 +93,7 @@ giscus 載入時，會使用 [GitHub Discussions 搜尋 API][search-api] 根據�
 - [Português](README.pt.md)
 - [Română](README.ro.md)
 - [Русский](README.ru.md)
+- [ภาษาไทย](README.th.md)
 - [Türkçe](README.tr.md)
 - [Tiếng Việt](README.vi.md)
 - [简体中文](README.zh-CN.md)

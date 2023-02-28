@@ -2,6 +2,7 @@ import { TransProps as NextTransProps } from 'next-translate';
 import NextTrans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';
 import { HTMLAttributes, useCallback } from 'react';
+import fallbacks from '../i18n.fallbacks.json';
 
 interface TranslationQuery {
   [name: string]: string | number;
@@ -44,9 +45,9 @@ export interface GiscusTranslate<I18Namespace = I18n> {
 export const availableLanguages = {
   ar: 'العربية',
   de: 'Deutsch',
-  gsw: 'Deutsch (Schweiz)',
   en: 'English',
   es: 'Español',
+  fa: 'فارسی',
   fr: 'Français',
   id: 'Indonesia',
   it: 'Italiano',
@@ -57,13 +58,14 @@ export const availableLanguages = {
   pt: 'Português',
   ro: 'Română',
   ru: 'Русский',
+  th: 'ภาษาไทย',
   tr: 'Türkçe',
   vi: 'Việt Nam',
   'zh-CN': '简体中文',
   'zh-TW': '繁體中文',
 } as const;
 
-export const rtlLanguages = new Set(['ar']);
+export const rtlLanguages = new Set(['ar', 'fa']);
 
 export type AvailableLanguage = keyof typeof availableLanguages;
 
@@ -131,9 +133,9 @@ const dateFormat: Intl.DateTimeFormatOptions = {
 const dateFormatters: Record<AvailableLanguage, Intl.DateTimeFormat> = {
   ar: new Intl.DateTimeFormat('ar', dateFormat),
   de: new Intl.DateTimeFormat('de', dateFormat),
-  gsw: new Intl.DateTimeFormat('gsw', dateFormat),
   en: new Intl.DateTimeFormat('en', dateFormat),
   es: new Intl.DateTimeFormat('es', dateFormat),
+  fa: new Intl.DateTimeFormat('fa', dateFormat),
   fr: new Intl.DateTimeFormat('fr', dateFormat),
   id: new Intl.DateTimeFormat('id', dateFormat),
   it: new Intl.DateTimeFormat('it', dateFormat),
@@ -144,6 +146,7 @@ const dateFormatters: Record<AvailableLanguage, Intl.DateTimeFormat> = {
   ko: new Intl.DateTimeFormat('ko', dateFormat),
   ro: new Intl.DateTimeFormat('ro', dateFormat),
   ru: new Intl.DateTimeFormat('ru', dateFormat),
+  th: new Intl.DateTimeFormat('th', dateFormat),
   tr: new Intl.DateTimeFormat('tr', dateFormat),
   vi: new Intl.DateTimeFormat('vi', dateFormat),
   'zh-CN': new Intl.DateTimeFormat('zh-CN', dateFormat),
@@ -158,9 +161,9 @@ const shortDateFormat: Intl.DateTimeFormatOptions = {
 const shortDateFormatters: Record<AvailableLanguage, Intl.DateTimeFormat> = {
   ar: new Intl.DateTimeFormat('ar', shortDateFormat),
   de: new Intl.DateTimeFormat('de', shortDateFormat),
-  gsw: new Intl.DateTimeFormat('gsw', shortDateFormat),
   en: new Intl.DateTimeFormat('en', shortDateFormat),
   es: new Intl.DateTimeFormat('es', shortDateFormat),
+  fa: new Intl.DateTimeFormat('fa', shortDateFormat),
   fr: new Intl.DateTimeFormat('fr', shortDateFormat),
   id: new Intl.DateTimeFormat('id', shortDateFormat),
   it: new Intl.DateTimeFormat('it', shortDateFormat),
@@ -171,6 +174,7 @@ const shortDateFormatters: Record<AvailableLanguage, Intl.DateTimeFormat> = {
   pt: new Intl.DateTimeFormat('pt', shortDateFormat),
   ro: new Intl.DateTimeFormat('ro', shortDateFormat),
   ru: new Intl.DateTimeFormat('ru', shortDateFormat),
+  th: new Intl.DateTimeFormat('th', shortDateFormat),
   tr: new Intl.DateTimeFormat('tr', shortDateFormat),
   vi: new Intl.DateTimeFormat('vi', shortDateFormat),
   'zh-CN': new Intl.DateTimeFormat('zh-CN', shortDateFormat),
@@ -186,9 +190,9 @@ const shortDateYearFormat: Intl.DateTimeFormatOptions = {
 const shortDateYearFormatters: Record<AvailableLanguage, Intl.DateTimeFormat> = {
   ar: new Intl.DateTimeFormat('ar', shortDateYearFormat),
   de: new Intl.DateTimeFormat('de', shortDateYearFormat),
-  gsw: new Intl.DateTimeFormat('gsw', shortDateYearFormat),
   en: new Intl.DateTimeFormat('en', shortDateYearFormat),
   es: new Intl.DateTimeFormat('es', shortDateYearFormat),
+  fa: new Intl.DateTimeFormat('fa', shortDateYearFormat),
   fr: new Intl.DateTimeFormat('fr', shortDateYearFormat),
   id: new Intl.DateTimeFormat('id', shortDateYearFormat),
   it: new Intl.DateTimeFormat('it', shortDateYearFormat),
@@ -199,6 +203,7 @@ const shortDateYearFormatters: Record<AvailableLanguage, Intl.DateTimeFormat> = 
   pt: new Intl.DateTimeFormat('pt', shortDateYearFormat),
   ro: new Intl.DateTimeFormat('ro', shortDateYearFormat),
   ru: new Intl.DateTimeFormat('ru', shortDateYearFormat),
+  th: new Intl.DateTimeFormat('th', shortDateYearFormat),
   tr: new Intl.DateTimeFormat('tr', shortDateYearFormat),
   vi: new Intl.DateTimeFormat('vi', shortDateYearFormat),
   'zh-CN': new Intl.DateTimeFormat('zh-CN', shortDateYearFormat),
@@ -214,9 +219,9 @@ const relativeTimeFormat: Intl.RelativeTimeFormatOptions = {
 const relativeTimeFormatters: Record<AvailableLanguage, Intl.RelativeTimeFormat> = {
   ar: new Intl.RelativeTimeFormat('ar', relativeTimeFormat),
   de: new Intl.RelativeTimeFormat('de', relativeTimeFormat),
-  gsw: new Intl.RelativeTimeFormat('gsw', relativeTimeFormat),
   en: new Intl.RelativeTimeFormat('en', relativeTimeFormat),
   es: new Intl.RelativeTimeFormat('es', relativeTimeFormat),
+  fa: new Intl.RelativeTimeFormat('fa', relativeTimeFormat),
   fr: new Intl.RelativeTimeFormat('fr', relativeTimeFormat),
   id: new Intl.RelativeTimeFormat('id', relativeTimeFormat),
   it: new Intl.RelativeTimeFormat('it', relativeTimeFormat),
@@ -227,6 +232,7 @@ const relativeTimeFormatters: Record<AvailableLanguage, Intl.RelativeTimeFormat>
   pt: new Intl.RelativeTimeFormat('pt', relativeTimeFormat),
   ro: new Intl.RelativeTimeFormat('ro', relativeTimeFormat),
   ru: new Intl.RelativeTimeFormat('ru', relativeTimeFormat),
+  th: new Intl.RelativeTimeFormat('th', relativeTimeFormat),
   tr: new Intl.RelativeTimeFormat('tr', relativeTimeFormat),
   vi: new Intl.RelativeTimeFormat('vi', relativeTimeFormat),
   'zh-CN': new Intl.RelativeTimeFormat('zh-CN', relativeTimeFormat),
@@ -263,7 +269,7 @@ function format(p: FormatParamsDate | FormatParamsRelative): string {
   const isDate = !('unit' in p);
   const { locale } = p.format.resolvedOptions();
 
-  if (locale === 'zh-CN' || locale === 'zh-TW') {
+  if (locale.startsWith('zh')) {
     const dateParts = isDate
       ? p.format.formatToParts(p.value)
       : p.format.formatToParts(p.value, p.unit);
@@ -275,7 +281,8 @@ function format(p: FormatParamsDate | FormatParamsRelative): string {
 }
 
 export function useRelativeTimeFormatter() {
-  const { lang } = useTranslation('common');
+  const { lang: locale } = useTranslation('common');
+  const lang = fallbacks[locale] ?? locale;
   const sdyf: Intl.DateTimeFormat = shortDateYearFormatters[lang] ?? shortDateYearFormatters.en;
   const sdf: Intl.DateTimeFormat = shortDateFormatters[lang] ?? shortDateFormatters.en;
   const rtf: Intl.RelativeTimeFormat = relativeTimeFormatters[lang] ?? relativeTimeFormatters.en;

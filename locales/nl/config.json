@@ -70,12 +70,14 @@
   "theme=dark_protanopia": "GitHub Dark Protanopia & Deuteranopia",
   "theme=dark_tritanopia": "GitHub Dark Tritanopia",
   "theme=dark_dimmed": "GitHub Dark Dimmed",
-  "theme=transparent_dark": "Transparent Dark",
   "theme=preferred_color_scheme": "Voorkeur kleurschema",
+  "theme=transparent_dark": "Transparent Dark",
+  "theme=cobalt": "RStudio Cobalt",
   "theme=custom": "Custom (experimenteel)",
 
   "enableGiscus": "Giscus inschakelen",
   "addTheFollowingScriptTag": "Add the following <code><script></code> tag to your website's template where you want the comments to appear. If an element with the class <code>giscus</code> exists, the comments will be placed there instead.",
+  "youHaveNotConfiguredRepositoryCategory": "U heeft uw <arepo>repository</arepo> en/of <acategory>categorie</acategory> niet geconfigureerd. De waarden voor die velden worden pas weergegeven als u ze invult.",
   "copy": "Kopieer",
 
   "[enterRepoHere]": "[VUL REPO HIER IN]",
